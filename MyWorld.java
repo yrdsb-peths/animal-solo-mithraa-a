@@ -13,7 +13,7 @@ public class MyWorld extends World {
         Dolphin dolphin = new Dolphin();
         addObject(dolphin, 350, 350);
         
-        Banana banana = new Banana();
-        addObject(banana, 350, 0);
+        Fish fish = new Fish();
+        addObject(fish, 350, 0);
     }
 }
