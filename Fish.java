@@ -10,13 +10,13 @@ public class Fish extends Actor
     public void act()
     {
         // Add your action code here.
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("left"))
         {
             move(-1);
         }
-        else if(Greenfoot.isKeyDown("left"))
+        else if(Greenfoot.isKeyDown("right"))
         {
-            move(2);
+            move(1);
         }
     }
 }
