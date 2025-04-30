@@ -6,8 +6,10 @@ import greenfoot.*;
  * @author Eswarathasan
  * @version April 2025
  */
-public class MyWorld extends World {
-    public MyWorld() {
+public class MyWorld extends World 
+{
+    public MyWorld() 
+    {
         super(600, 400, 1);
         
         Dolphin dolphin = new Dolphin();
