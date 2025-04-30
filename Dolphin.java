@@ -19,8 +19,20 @@ public class Dolphin extends Actor
         {
             move(1);
         }
-        
-        // Remove fish if dolphin eats it 
-        removeTouching(Fish.class);
+        eat();
     }
+    
+    public void eat()
+    /**
+     * eat the fish and spawn a new fish if the fish is eaten.
+     */
+    {
+        if(isTouching(Fish.class))
+        {
+            removeTouching(Fish.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createFish();
+        }
+    }
+    
 }
