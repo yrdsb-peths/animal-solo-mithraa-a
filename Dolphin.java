@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Dolphin extends Actor
 {
+    GreenfootSound dolphinSound = new GreenfootSound(
+    
+    
     public void act()
     {
         // Add your action code here.
