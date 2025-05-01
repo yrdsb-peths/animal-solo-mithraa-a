@@ -8,6 +8,8 @@ import greenfoot.*;
  */
 public class MyWorld extends World 
 {
+    public int score = 0;
+    Label scoreLabel;
     /**
      * Constructor for the objects of the class MyWorld
      */
@@ -21,10 +23,19 @@ public class MyWorld extends World
         addObject(dolphin, 300, 250);
         
         // Create a label 
-        Label scoreLabel = new Label(0, 80);
+        scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 40, 40);
         
         createFish();
+    }
+    
+    /**
+     * End the game and draw game over
+     */
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300, 200);
     }
     
     /**
@@ -33,7 +44,7 @@ public class MyWorld extends World
     public void increaseScore()
     {
         score++;
-        
+        scoreLabel.setValue(score);
     }
     
     /** 
