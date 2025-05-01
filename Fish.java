@@ -9,14 +9,17 @@ public class Fish extends Actor
 {
     public void act()
     {
-        // Add your action code here.
-         if(Greenfoot.isKeyDown("left"))
+        // Apple falls downwards. 
+        int x = getX();
+        int y = getY() + 2;
+        setLocation(x, y);
+        
+        // Remove apple and draw game over when apple gets to bottom
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() <= world.getHeight())
         {
-            move(-1);
-        }
-        else if(Greenfoot.isKeyDown("right"))
-        {
-            move(1);
+            world.gameOver();
+            world.removeObject(this);
         }
     }
 }
