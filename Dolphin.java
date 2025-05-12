@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Dolphin extends Actor
 {
-    GreenfootSound dolphinSound = new GreenfootSound("dolphin1.mp3")
+    GreenfootSound dolphinSound = new GreenfootSound("dolphin1.mp3");
     
     
     public void act()
@@ -36,6 +36,7 @@ public class Dolphin extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createFish();
             world.increaseScore();
+            dolphinSound.play();
         }
     }
     

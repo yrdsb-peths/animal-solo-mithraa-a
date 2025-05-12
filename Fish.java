@@ -22,5 +22,10 @@ public class Fish extends Actor
             world.removeObject(this);
         }
     }
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
+    }
 }
 
